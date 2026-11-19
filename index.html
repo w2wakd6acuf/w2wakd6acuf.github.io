@@ -1,0 +1,1478 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51hlw官网_视频内容社区,记录真实生活影像</title>
+<meta name="description" content="51hlw官方网站是面向创作者与影像爱好者的视频内容社区，深耕原创短片、生活记录与实用教程，以品质内容生态与真实影像陪伴每一位用户成长。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6f6a'/%3E%3Cpath d='M24 20l20 12-20 12z' fill='%23f2e9d8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --hlw-ink:#1d2b2a;
+  --hlw-deep:#22403c;
+  --hlw-green:#2f6f6a;
+  --hlw-green-soft:#bcd9d1;
+  --hlw-sand:#f3ece0;
+  --hlw-sand-deep:#e6dbc8;
+  --hlw-clay:#c26a4a;
+  --hlw-gold:#c9a227;
+  --hlw-line:#d8cfbe;
+  --hlw-bg:#fbf8f2;
+  --hlw-radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--hlw-ink);
+  background:var(--hlw-bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.hlw-wrap{width:min(1180px,92%);margin:0 auto}
+.hlw-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:.18em;color:var(--hlw-green);
+  font-weight:600;text-transform:uppercase;
+}
+.hlw-eyebrow::before{content:"";width:26px;height:2px;background:var(--hlw-gold)}
+.hlw-section{padding:74px 0}
+.hlw-section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.hlw-section-head h2{font-size:clamp(24px,3.2vw,34px);letter-spacing:.02em;line-height:1.3}
+.hlw-section-head p{color:#5c6b68;font-size:14.5px;max-width:520px}
+.hlw-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:999px;font-size:14.5px;font-weight:600;
+  transition:.25s ease;border:1px solid transparent;
+}
+.hlw-btn-primary{background:var(--hlw-green);color:#fdfbf6}
+.hlw-btn-primary:hover{background:var(--hlw-deep);transform:translateY(-2px)}
+.hlw-btn-ghost{border-color:var(--hlw-green);color:var(--hlw-green)}
+.hlw-btn-ghost:hover{background:var(--hlw-green-soft)}
+.hlw-btn-clay{background:var(--hlw-clay);color:#fff7f0}
+.hlw-btn-clay:hover{filter:brightness(.93);transform:translateY(-2px)}
+
+/* ===== 公告条 + 页头 吸顶 ===== */
+.hlw-sticky{position:sticky;top:0;z-index:90}
+.hlw-notice{
+  background:linear-gradient(90deg,var(--hlw-deep),var(--hlw-green));
+  color:#eef6f2;font-size:13.5px;
+}
+.hlw-notice-inner{display:flex;align-items:center;gap:14px;padding:9px 0;flex-wrap:wrap}
+.hlw-notice-tag{
+  background:var(--hlw-gold);color:#2a2415;font-weight:700;
+  font-size:12px;padding:2px 10px;border-radius:999px;letter-spacing:.06em;white-space:nowrap;
+}
+.hlw-notice-track{flex:1;overflow:hidden;white-space:nowrap}
+.hlw-notice-track span{display:inline-block;padding-right:60px;animation:hlw-marquee 26s linear infinite}
+.hlw-notice a{color:#ffe9a8;font-weight:600;white-space:nowrap}
+.hlw-notice a:hover{text-decoration:underline}
+@keyframes hlw-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.hlw-header{
+  background:rgba(251,248,242,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hlw-line);
+}
+.hlw-header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 0}
+.hlw-logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;letter-spacing:.01em}
+.hlw-logo-mark{
+  width:40px;height:40px;border-radius:12px;
+  background:linear-gradient(140deg,var(--hlw-green),#3f8f85);
+  display:grid;place-items:center;color:#f6f0e2;font-size:15px;font-weight:800;letter-spacing:0;
+  box-shadow:0 6px 16px rgba(47,111,106,.28);
+}
+.hlw-logo small{display:block;font-size:10.5px;font-weight:500;color:#7a8a86;letter-spacing:.22em}
+.hlw-nav{display:flex;align-items:center;gap:4px}
+.hlw-nav a{
+  padding:8px 14px;border-radius:999px;font-size:14.5px;color:#37494a;font-weight:500;
+  transition:.2s;
+}
+.hlw-nav a:hover,.hlw-nav a.is-active{background:var(--hlw-green-soft);color:var(--hlw-deep)}
+.hlw-header-tools{display:flex;align-items:center;gap:10px}
+.hlw-search{
+  display:flex;align-items:center;gap:8px;background:#fff;
+  border:1px solid var(--hlw-line);border-radius:999px;padding:6px 6px 6px 15px;
+  transition:.25s;
+}
+.hlw-search:focus-within{border-color:var(--hlw-green);box-shadow:0 0 0 3px rgba(47,111,106,.13)}
+.hlw-search input{
+  border:none;outline:none;background:transparent;font-size:14px;width:150px;color:var(--hlw-ink);
+}
+.hlw-search button{
+  background:var(--hlw-green);color:#fff;border-radius:999px;padding:6px 15px;font-size:13.5px;font-weight:600;
+}
+.hlw-search button:hover{background:var(--hlw-deep)}
+.hlw-burger{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:10px}
+.hlw-burger i{display:block;width:21px;height:2px;background:var(--hlw-deep);border-radius:2px;transition:.25s}
+.hlw-mobile-panel{display:none;border-top:1px solid var(--hlw-line);background:#fdfaf4;padding:10px 0 18px}
+.hlw-mobile-panel.is-open{display:block}
+.hlw-mobile-panel a{display:block;padding:11px 4px;font-size:15px;border-bottom:1px dashed var(--hlw-line)}
+.hlw-mobile-panel .hlw-search{margin-top:12px;width:100%}
+.hlw-mobile-panel .hlw-search input{width:100%}
+.hlw-result-tip{
+  display:none;font-size:13.5px;color:var(--hlw-clay);padding:8px 0 0;
+}
+
+/* ===== 首屏 ===== */
+.hlw-hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1000px 420px at 85% -10%,rgba(201,162,39,.16),transparent 60%),
+    radial-gradient(760px 380px at 8% 110%,rgba(47,111,106,.16),transparent 62%),
+    var(--hlw-bg);
+}
+.hlw-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:66px 0 58px}
+.hlw-hero h1{
+  font-size:clamp(40px,6vw,66px);line-height:1.08;letter-spacing:-.01em;
+  color:var(--hlw-deep);margin:16px 0 6px;font-weight:800;
+}
+.hlw-hero h1 span{color:var(--hlw-green);}
+.hlw-hero-sub{
+  font-size:16.5px;color:#415553;margin:16px 0 26px;max-width:540px;
+}
+.hlw-hero-sub strong{color:var(--hlw-clay)}
+.hlw-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.hlw-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px}
+.hlw-stat{
+  background:#fff;border:1px solid var(--hlw-line);border-radius:var(--hlw-radius);
+  padding:14px 16px;
+}
+.hlw-stat b{font-size:24px;color:var(--hlw-green);display:block;line-height:1.2}
+.hlw-stat span{font-size:12.5px;color:#7a8a86;letter-spacing:.04em}
+.hlw-hero-visual{position:relative}
+.hlw-hero-frame{
+  border-radius:22px;overflow:hidden;border:1px solid var(--hlw-line);
+  box-shadow:0 24px 50px -22px rgba(34,64,60,.4);position:relative;
+}
+.hlw-hero-frame img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hlw-hero-badge{
+  position:absolute;left:18px;top:18px;background:rgba(34,64,60,.82);color:#f4efe2;
+  padding:7px 15px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.06em;
+  backdrop-filter:blur(4px);
+}
+.hlw-hero-float{
+  position:absolute;right:-14px;bottom:-18px;background:#fff;border:1px solid var(--hlw-line);
+  border-radius:16px;padding:14px 18px;box-shadow:0 18px 34px -16px rgba(34,64,60,.34);
+  display:flex;align-items:center;gap:12px;max-width:270px;
+}
+.hlw-hero-float b{display:block;font-size:14px;color:var(--hlw-deep)}
+.hlw-hero-float span{font-size:12px;color:#7a8a86}
+.hlw-hero-float em{
+  width:36px;height:36px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--hlw-clay),#e09069);color:#fff;font-style:normal;font-weight:700;font-size:13px;
+}
+
+/* ===== 品牌介绍长文 ===== */
+.hlw-intro{background:#fff;border-top:1px solid var(--hlw-line);border-bottom:1px solid var(--hlw-line)}
+.hlw-intro-grid{display:grid;grid-template-columns:250px 1fr;gap:48px}
+.hlw-intro-aside h2{font-size:25px;color:var(--hlw-deep);line-height:1.4}
+.hlw-intro-aside p{font-size:13.5px;color:#7a8a86;margin-top:12px}
+.hlw-prose{columns:2;column-gap:44px;font-size:14.8px;color:#3d4f4d;text-align:justify}
+.hlw-prose p{margin-bottom:16px;break-inside:avoid}
+.hlw-prose h3{font-size:15.5px;color:var(--hlw-green);margin:4px 0 10px;break-after:avoid}
+.hlw-prose em{font-style:normal;color:var(--hlw-clay);font-weight:600}
+
+/* ===== 焦点视频 ===== */
+.hlw-focus-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+.hlw-vcard{
+  background:#fff;border:1px solid var(--hlw-line);border-radius:var(--hlw-radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .28s ease,box-shadow .28s ease;
+}
+.hlw-vcard:hover{transform:translateY(-4px);box-shadow:0 20px 36px -20px rgba(34,64,60,.4)}
+.hlw-vcard-cover{position:relative;overflow:hidden;background:var(--hlw-deep)}
+.hlw-vcard-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s ease}
+.hlw-vcard:hover .hlw-vcard-cover img{transform:scale(1.05)}
+.hlw-vcard-cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(18,36,34,.62));
+}
+.hlw-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;z-index:2;transition:.25s;
+  box-shadow:0 8px 20px rgba(0,0,0,.24);
+}
+.hlw-play::before{
+  content:"";border-style:solid;border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent var(--hlw-green);margin-left:3px;
+}
+.hlw-vcard:hover .hlw-play{transform:translate(-50%,-50%) scale(1.1);background:#fff}
+.hlw-cover-tag{
+  position:absolute;left:12px;top:12px;z-index:2;background:var(--hlw-gold);color:#2a2415;
+  font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:.05em;
+}
+.hlw-cover-dur{
+  position:absolute;right:12px;bottom:12px;z-index:2;background:rgba(18,36,34,.78);color:#f2ede2;
+  font-size:11.5px;padding:2px 9px;border-radius:6px;
+}
+.hlw-vcard-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.hlw-vcard-body h3{font-size:16px;line-height:1.5;color:var(--hlw-deep)}
+.hlw-vcard-body p{font-size:13px;color:#66756f;line-height:1.7}
+.hlw-vcard-big .hlw-vcard-body h3{font-size:20px}
+.hlw-vcard-meta{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-top:auto;padding-top:10px;border-top:1px dashed var(--hlw-line);font-size:12.5px;color:#8a978f;
+}
+.hlw-author-mini{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#455a56}
+.hlw-avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:12px;font-weight:700;color:#fff;
+}
+.hlw-tagset{display:flex;gap:6px;flex-wrap:wrap}
+.hlw-tag{
+  font-size:11.5px;background:var(--hlw-sand);color:#6d7660;
+  padding:2px 9px;border-radius:999px;border:1px solid var(--hlw-line);
+}
+.hlw-ops{display:flex;gap:8px;margin-top:2px}
+.hlw-op{
+  font-size:12px;color:#5f706a;border:1px solid var(--hlw-line);
+  padding:4px 11px;border-radius:999px;display:inline-flex;align-items:center;gap:5px;
+  transition:.2s;background:#fff;
+}
+.hlw-op:hover{border-color:var(--hlw-green);color:var(--hlw-green)}
+.hlw-op.is-on{background:var(--hlw-green);border-color:var(--hlw-green);color:#fff}
+.hlw-op.is-fav{color:var(--hlw-clay);border-color:var(--hlw-clay)}
+.hlw-focus-side{display:grid;gap:16px;grid-template-rows:repeat(2,1fr)}
+.hlw-mini-v{
+  display:grid;grid-template-columns:140px 1fr;gap:0;background:#fff;
+  border:1px solid var(--hlw-line);border-radius:14px;overflow:hidden;transition:.25s;
+}
+.hlw-mini-v:hover{border-color:var(--hlw-green);transform:translateX(3px)}
+.hlw-mini-v .hlw-vcard-cover img{aspect-ratio:16/10;height:100%}
+.hlw-mini-v .hlw-mini-body{padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.hlw-mini-body h4{font-size:14px;line-height:1.45;color:var(--hlw-deep)}
+.hlw-mini-body span{font-size:12px;color:#8a978f}
+
+/* ===== 视频流 ===== */
+.hlw-stream{background:#fff;border-top:1px solid var(--hlw-line);border-bottom:1px solid var(--hlw-line)}
+.hlw-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.hlw-tab{
+  font-size:13.5px;padding:7px 16px;border-radius:999px;border:1px solid var(--hlw-line);
+  color:#5f706a;background:#fdfbf6;transition:.2s;
+}
+.hlw-tab:hover{border-color:var(--hlw-green)}
+.hlw-tab.is-active{background:var(--hlw-green);border-color:var(--hlw-green);color:#fff;font-weight:600}
+.hlw-stream-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.hlw-stream-grid.is-two{grid-template-columns:repeat(2,1fr)}
+.hlw-hidden{display:none!important}
+
+/* ===== 专题 ===== */
+.hlw-topics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.hlw-topic{
+  position:relative;border-radius:var(--hlw-radius);overflow:hidden;
+  border:1px solid var(--hlw-line);background:var(--hlw-deep);min-height:260px;
+  display:flex;flex-direction:column;justify-content:flex-end;color:#f4efe4;
+  grid-row:span 1;
+}
+.hlw-topic.hlw-topic-wide{grid-column:span 2;grid-row:span 2;min-height:360px}
+.hlw-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.86}
+.hlw-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,36,34,.05) 30%,rgba(18,36,34,.85))}
+.hlw-topic-body{position:relative;z-index:2;padding:20px}
+.hlw-topic-body span{
+  display:inline-block;font-size:11.5px;letter-spacing:.12em;background:rgba(201,162,39,.92);
+  color:#2a2415;padding:2px 10px;border-radius:999px;font-weight:700;margin-bottom:9px;
+}
+.hlw-topic-body h3{font-size:17px;line-height:1.45;margin-bottom:6px}
+.hlw-topic-wide .hlw-topic-body h3{font-size:23px}
+.hlw-topic-body p{font-size:12.5px;color:#cdd8cf;line-height:1.65}
+
+/* ===== 创作者 ===== */
+.hlw-creators{background:linear-gradient(180deg,#f4f9f6,#fbf8f2)}
+.hlw-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hlw-creator{
+  background:#fff;border:1px solid var(--hlw-line);border-radius:var(--hlw-radius);
+  padding:22px;display:flex;flex-direction:column;gap:12px;transition:.28s;
+}
+.hlw-creator:hover{transform:translateY(-4px);border-color:var(--hlw-green-soft);box-shadow:0 18px 30px -20px rgba(34,64,60,.4)}
+.hlw-creator-top{display:flex;align-items:center;gap:13px}
+.hlw-creator-top .hlw-avatar{width:52px;height:52px;font-size:19px;box-shadow:0 6px 14px rgba(34,64,60,.18)}
+.hlw-creator-top h3{font-size:16.5px;color:var(--hlw-deep)}
+.hlw-creator-top span{font-size:12.5px;color:var(--hlw-clay);font-weight:600}
+.hlw-creator p{font-size:13px;color:#5f706a;line-height:1.7;flex:1}
+.hlw-creator-foot{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:#8a978f;border-top:1px dashed var(--hlw-line);padding-top:11px}
+.hlw-creator-foot b{color:var(--hlw-green);font-size:14px}
+
+/* ===== 榜单 ===== */
+.hlw-rank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hlw-rank{
+  background:#fff;border:1px solid var(--hlw-line);border-radius:var(--hlw-radius);padding:22px;
+}
+.hlw-rank h3{font-size:16px;color:var(--hlw-deep);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.hlw-rank h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--hlw-gold)}
+.hlw-rank > p{font-size:12.5px;color:#8a978f;margin-bottom:14px}
+.hlw-rank ol{display:flex;flex-direction:column;gap:11px}
+.hlw-rank li{display:flex;gap:11px;align-items:center;font-size:13.5px;color:#41534f}
+.hlw-rank li i{
+  font-style:normal;width:22px;height:22px;border-radius:7px;flex:none;
+  display:grid;place-items:center;font-size:12px;font-weight:700;
+  background:var(--hlw-sand);color:#8a7850;
+}
+.hlw-rank li:nth-child(1) i{background:var(--hlw-gold);color:#2a2415}
+.hlw-rank li:nth-child(2) i{background:var(--hlw-green-soft);color:var(--hlw-deep)}
+.hlw-rank li span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hlw-rank li em{font-style:normal;font-size:12px;color:var(--hlw-clay)}
+
+/* ===== 灵感 / 工具 ===== */
+.hlw-idea{background:#fff;border-top:1px solid var(--hlw-line);border-bottom:1px solid var(--hlw-line)}
+.hlw-idea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hlw-idea-card{
+  border:1px solid var(--hlw-line);border-radius:var(--hlw-radius);padding:24px;
+  background:linear-gradient(160deg,#fdfbf5,#f2f7f4);display:flex;flex-direction:column;gap:10px;
+}
+.hlw-idea-card .hlw-idea-num{font-size:12px;font-weight:700;color:var(--hlw-clay);letter-spacing:.12em}
+.hlw-idea-card h3{font-size:17px;color:var(--hlw-deep)}
+.hlw-idea-card p{font-size:13.2px;color:#5f706a;line-height:1.75;flex:1}
+.hlw-idea-card button{
+  align-self:flex-start;font-size:12.5px;color:var(--hlw-green);font-weight:600;
+  border-bottom:1px solid var(--hlw-green);padding-bottom:1px;
+}
+
+/* ===== 评价 ===== */
+.hlw-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hlw-review{
+  background:#fff;border:1px solid var(--hlw-line);border-left:4px solid var(--hlw-green-soft);
+  border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px;
+}
+.hlw-review:nth-child(3n+2){border-left-color:var(--hlw-gold)}
+.hlw-review:nth-child(3n+3){border-left-color:var(--hlw-clay)}
+.hlw-review p{font-size:13.5px;color:#41534f;line-height:1.8}
+.hlw-review-foot{display:flex;align-items:center;gap:9px;font-size:12.5px;color:#8a978f;margin-top:auto}
+.hlw-review-foot .hlw-avatar{width:30px;height:30px;font-size:12px}
+
+/* ===== 动态 & FAQ ===== */
+.hlw-news-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+.hlw-news-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--hlw-line)}
+.hlw-news-item{
+  display:grid;grid-template-columns:96px 1fr;gap:18px;padding:18px 0;
+  border-bottom:1px solid var(--hlw-line);transition:.2s;
+}
+.hlw-news-item:hover{background:#fdfaf3}
+.hlw-news-item time{font-size:12.5px;color:var(--hlw-clay);font-weight:600;letter-spacing:.03em}
+.hlw-news-item h3{font-size:15px;color:var(--hlw-deep);margin-bottom:4px}
+.hlw-news-item p{font-size:13px;color:#6a7a74;line-height:1.65}
+.hlw-faq details{
+  border:1px solid var(--hlw-line);border-radius:12px;background:#fff;
+  margin-bottom:10px;overflow:hidden;
+}
+.hlw-faq summary{
+  padding:15px 18px;font-size:14.5px;font-weight:600;color:var(--hlw-deep);
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.hlw-faq summary::-webkit-details-marker{display:none}
+.hlw-faq summary::after{content:"+";font-size:19px;color:var(--hlw-green);line-height:1;font-weight:400}
+.hlw-faq details[open] summary::after{content:"–"}
+.hlw-faq details[open] summary{background:#f4f9f6}
+.hlw-faq .hlw-faq-body{padding:0 18px 16px;font-size:13.5px;color:#5f706a;line-height:1.8}
+
+/* ===== 联系 ===== */
+.hlw-contact{
+  background:linear-gradient(135deg,var(--hlw-deep),#2c5b55 60%,#376b60);
+  color:#eef4ec;border-radius:22px;padding:44px;display:grid;
+  grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;
+}
+.hlw-contact h2{font-size:clamp(24px,3vw,32px);line-height:1.35;margin-bottom:14px}
+.hlw-contact p{font-size:14.2px;color:#c6d6cb;line-height:1.85}
+.hlw-contact-list{display:flex;flex-direction:column;gap:13px}
+.hlw-contact-row{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border-radius:12px;padding:13px 16px}
+.hlw-contact-row span{font-size:12.5px;color:#a8c2b4;display:block}
+.hlw-contact-row b{font-size:14.5px;font-weight:600;color:#f4f1e4}
+.hlw-contact-row i{
+  width:34px;height:34px;border-radius:50%;background:rgba(201,162,39,.92);color:#2a2415;
+  display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px;flex:none;
+}
+
+/* ===== 页脚 ===== */
+.hlw-footer{background:#182e2b;color:#b8c9be;padding:52px 0 26px;margin-top:74px}
+.hlw-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)}
+.hlw-footer h4{color:#f0f2e6;font-size:14.5px;margin-bottom:14px;letter-spacing:.05em}
+.hlw-footer p,.hlw-footer li{font-size:12.8px;line-height:1.9;color:#9fb4a8}
+.hlw-footer li a:hover{color:var(--hlw-gold)}
+.hlw-footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.hlw-footer-brand .hlw-logo-mark{width:34px;height:34px;font-size:13px;background:linear-gradient(140deg,#3f8f85,#2f6f6a)}
+.hlw-footer-brand b{color:#f0f2e6;font-size:16px}
+.hlw-footer-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:20px;font-size:12px;color:#7f958a}
+
+/* ===== 回顶 & Toast ===== */
+.hlw-top-btn{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--hlw-green);color:#fff;display:grid;place-items:center;font-size:18px;
+  box-shadow:0 12px 24px -10px rgba(47,111,106,.7);opacity:0;pointer-events:none;
+  transition:.3s;z-index:80;
+}
+.hlw-top-btn.is-show{opacity:1;pointer-events:auto}
+.hlw-top-btn:hover{background:var(--hlw-deep)}
+.hlw-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(24,46,43,.95);color:#f0f2e6;font-size:13.5px;padding:10px 20px;border-radius:999px;
+  opacity:0;transition:.3s;z-index:120;pointer-events:none;white-space:nowrap;
+}
+.hlw-toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+/* ===== 弹窗 ===== */
+.hlw-modal-mask{
+  position:fixed;inset:0;background:rgba(18,36,34,.55);backdrop-filter:blur(3px);
+  z-index:110;display:none;align-items:center;justify-content:center;padding:20px;
+}
+.hlw-modal-mask.is-open{display:flex}
+.hlw-modal{
+  background:#fdfbf5;border-radius:18px;width:min(480px,100%);padding:28px;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.5);position:relative;
+}
+.hlw-modal h3{font-size:19px;color:var(--hlw-deep);margin-bottom:8px}
+.hlw-modal p{font-size:13.5px;color:#5f706a;line-height:1.8;margin-bottom:16px}
+.hlw-modal .hlw-modal-list{display:flex;flex-direction:column;gap:9px}
+.hlw-modal .hlw-modal-list button{
+  text-align:left;font-size:13.5px;padding:10px 14px;border-radius:10px;
+  border:1px solid var(--hlw-line);background:#fff;color:#3d4f4d;transition:.2s;
+}
+.hlw-modal .hlw-modal-list button:hover{border-color:var(--hlw-green);background:#f4f9f6;color:var(--hlw-green)}
+.hlw-modal-close{
+  position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:50%;
+  display:grid;place-items:center;font-size:18px;color:#8a978f;
+}
+.hlw-modal-close:hover{background:var(--hlw-sand);color:var(--hlw-clay)}
+.hlw-modal-actions{display:flex;gap:10px;margin-top:18px}
+.hlw-modal input,.hlw-modal textarea{
+  width:100%;border:1px solid var(--hlw-line);border-radius:10px;padding:11px 13px;
+  font-family:inherit;font-size:13.5px;color:var(--hlw-ink);outline:none;background:#fff;margin-bottom:10px;
+  resize:vertical;
+}
+.hlw-modal input:focus,.hlw-modal textarea:focus{border-color:var(--hlw-green);box-shadow:0 0 0 3px rgba(47,111,106,.12)}
+
+@media (max-width:1000px){
+  .hlw-hero-grid{grid-template-columns:1fr;gap:34px;padding:44px 0}
+  .hlw-intro-grid{grid-template-columns:1fr;gap:22px}
+  .hlw-prose{columns:1}
+  .hlw-focus-grid{grid-template-columns:1fr}
+  .hlw-stream-grid{grid-template-columns:repeat(2,1fr)}
+  .hlw-topics-grid{grid-template-columns:repeat(2,1fr)}
+  .hlw-topic.hlw-topic-wide{grid-column:span 2;grid-row:span 1;min-height:280px}
+  .hlw-creator-grid,.hlw-idea-grid,.hlw-reviews-grid,.hlw-rank-grid{grid-template-columns:repeat(2,1fr)}
+  .hlw-news-grid{grid-template-columns:1fr}
+  .hlw-contact{grid-template-columns:1fr;padding:32px}
+  .hlw-footer-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .hlw-nav,.hlw-header-tools .hlw-search{display:none}
+  .hlw-burger{display:flex}
+}
+@media (max-width:640px){
+  .hlw-section{padding:52px 0}
+  .hlw-stream-grid,.hlw-creator-grid,.hlw-idea-grid,.hlw-reviews-grid,.hlw-rank-grid,.hlw-topics-grid{grid-template-columns:1fr}
+  .hlw-topic.hlw-topic-wide{grid-column:span 1}
+  .hlw-hero-stats{grid-template-columns:1fr}
+  .hlw-footer-grid{grid-template-columns:1fr}
+  .hlw-news-item{grid-template-columns:1fr;gap:5px}
+  .hlw-hero-float{right:8px;bottom:-14px;transform:scale(.92)}
+  .hlw-notice-inner{font-size:12.5px}
+  .hlw-mini-v{grid-template-columns:120px 1fr}
+  .hlw-top-btn{right:14px;bottom:16px;width:42px;height:42px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="hlw-sticky">
+  <div class="hlw-notice" aria-label="站点新增公告">
+    <div class="hlw-wrap hlw-notice-inner">
+      <span class="hlw-notice-tag">新增</span>
+      <div class="hlw-notice-track">
+        <span>「深巷早餐图鉴」第 12 集已上线 · 51hlw 冬季影像征集开放报名 · 创作者后台新增剪辑脚本灵感库 · 本周新入库原创短片 86 部 · 城市夜行专题更新至第 5 期 · 「深巷早餐图鉴」第 12 集已上线 · 51hlw 冬季影像征集开放报名 · 创作者后台新增剪辑脚本灵感库 · 本周新入库原创短片 86 部 · 城市夜行专题更新至第 5 期 · </span>
+      </div>
+      <a href="#hlw-news">查看全部更新 ›</a>
+    </div>
+  </div>
+
+  <header class="hlw-header">
+    <div class="hlw-wrap hlw-header-inner">
+      <a class="hlw-logo" href="#hlw-hero" aria-label="51hlw 官网页首">
+        <span class="hlw-logo-mark">51</span>
+        <span>51hlw<small>影像内容社区</small></span>
+      </a>
+      <nav class="hlw-nav" aria-label="主导航">
+        <a href="#hlw-hero" class="is-active">首页</a>
+        <a href="#hlw-focus">焦点影像</a>
+        <a href="#hlw-topics">专题企划</a>
+        <a href="#hlw-creators">创作者</a>
+        <a href="#hlw-news">企业动态</a>
+        <a href="#hlw-contact">联系我们</a>
+      </nav>
+      <div class="hlw-header-tools">
+        <form class="hlw-search" id="hlw-search-form" role="search" onsubmit="return false;">
+          <input type="text" id="hlw-search-input" placeholder="搜索短片、作者、话题" aria-label="站内搜索">
+          <button type="button" id="hlw-search-btn">搜索</button>
+        </form>
+        <button class="hlw-burger" id="hlw-burger" aria-label="展开导航" aria-expanded="false"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+    <div class="hlw-mobile-panel" id="hlw-mobile-panel">
+      <div class="hlw-wrap">
+        <a href="#hlw-hero">首页</a>
+        <a href="#hlw-focus">焦点影像</a>
+        <a href="#hlw-topics">专题企划</a>
+        <a href="#hlw-creators">创作者</a>
+        <a href="#hlw-rank">数据榜单</a>
+        <a href="#hlw-news">企业动态</a>
+        <a href="#hlw-contact">联系我们</a>
+        <form class="hlw-search" onsubmit="return false;">
+          <input type="text" placeholder="搜索短片、作者、话题" aria-label="移动端站内搜索">
+          <button type="button" onclick="hlwToast('已为你匹配到 12 条相关内容')">搜索</button>
+        </form>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hlw-hero" id="hlw-hero">
+    <div class="hlw-wrap hlw-hero-grid">
+      <div class="hlw-hero-copy">
+        <p class="hlw-eyebrow">Official Site · 官方门户</p>
+        <h1>51hlw<span>官网</span></h1>
+        <p class="hlw-hero-sub">51hlw 是一家持续运营的<strong>影像视频品牌</strong>，以原创短片、生活记录与实用教程为核心，为创作者与企业搭建高品质内容生态。这里是 51hlw 官方网站，记录真实，也陪伴成长。</p>
+        <div class="hlw-hero-actions">
+          <a class="hlw-btn hlw-btn-primary" href="#hlw-focus">浏览焦点影像</a>
+          <a class="hlw-btn hlw-btn-ghost" href="#hlw-contact">创作者报名</a>
+          <button class="hlw-btn hlw-btn-clay" data-hlw-open="share">分享本页</button>
+        </div>
+        <div class="hlw-hero-stats">
+          <div class="hlw-stat"><b data-hlw-count="12680">0</b><span>原创短片入库</span></div>
+          <div class="hlw-stat"><b data-hlw-count="2380">0</b><span>签约创作者</span></div>
+          <div class="hlw-stat"><b data-hlw-count="365">0</b><span>天持续更新</span></div>
+        </div>
+      </div>
+      <div class="hlw-hero-visual">
+        <div class="hlw-hero-frame">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f6f6a'/%3E%3Cstop offset='1' stop-color='%231d3b37'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23c9a227' stop-opacity='.85'/%3E%3Cstop offset='1' stop-color='%23c9a227' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='600' cy='140' r='96' fill='%23f3ece0' opacity='.14'/%3E%3Ccircle cx='600' cy='140' r='58' fill='%23f3ece0' opacity='.2'/%3E%3Cpath d='M0 430 Q180 340 360 420 T800 380 L800 600 L0 600 Z' fill='%23152e2b' opacity='.75'/%3E%3Cpath d='M0 480 Q200 400 400 470 T800 430 L800 600 L0 600 Z' fill='%230f2421' opacity='.8'/%3E%3Crect x='90' y='150' width='250' height='150' rx='14' fill='%23f3ece0' opacity='.9'/%3E%3Cpath d='M150 200 L150 250 L205 225 Z' fill='%232f6f6a'/%3E%3Crect x='225' y='205' width='90' height='8' rx='4' fill='%232f6f6a' opacity='.55'/%3E%3Crect x='225' y='225' width='60' height='8' rx='4' fill='%232f6f6a' opacity='.35'/%3E%3Crect x='90' y='330' width='170' height='10' rx='5' fill='%23f3ece0' opacity='.7'/%3E%3Crect x='90' y='352' width='116' height='10' rx='5' fill='%23f3ece0' opacity='.4'/%3E%3Crect x='0' y='0' width='800' height='600' fill='url(%23g2)'/%3E%3C/svg%3E" alt="51hlw 品牌主视觉：深绿色影像画框与金色渐变光" width="800" height="600">
+          <span class="hlw-hero-badge">2026 冬季主视觉</span>
+        </div>
+        <div class="hlw-hero-float">
+          <em>本周</em>
+          <div><b>首映厅 · 新片 26 部</b><span>原创正版 · 高清画质</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌介绍长文 -->
+  <section class="hlw-intro hlw-section" id="hlw-about">
+    <div class="hlw-wrap hlw-intro-grid">
+      <aside class="hlw-intro-aside">
+        <p class="hlw-eyebrow">Brand Story</p>
+        <h2>关于 51hlw<br>与影像共处的第 9 年</h2>
+        <p>从一间十平米的剪辑室，到今天 2380 位创作者共同参与的影像内容社区，51hlw 一直在做同一件事：让真实的生活被好好记录下来。</p>
+        <button class="hlw-btn hlw-btn-ghost" data-hlw-open="about" style="margin-top:18px">品牌理念全文</button>
+      </aside>
+      <div class="hlw-prose">
+        <h3>一个以「记录」为方法论的视频品牌</h3>
+        <p>51hlw 官方网站不是一个冷冰冰的片库入口，而是一个持续生长的影像内容社区。我们把镜头对准普通人一天里最有质感的片段：清晨菜市场的蒸汽、加班到深夜的写字楼灯光、一条旧巷子里修鞋匠的手部特写。9 年来，51hlw 累积了 12680 部原创短片，它们被分成生活记录、实用教程、深度访谈、城市探索四条主线，构成一套可检索、可追溯的内容生态。</p>
+        <p>作为国内较早深耕垂直领域的影像品牌之一，我们坚持三件事：<em>原创、正版、高清</em>。51hlw 平台的所有入库短片均与创作者签署正式授权，画面统一按 1080P 起交付，重要企划提供 4K 素材。我们不追逐流量噪声，更愿意把版面留给愿意打磨作品的人。</p>
+        <h3>为什么叫 51hlw</h3>
+        <p>「51」取自团队最初的工作室门牌号，「hlw」是三位联合创始人的姓氏缩写。名字朴素，却恰好对应我们的气质：不擅长包装，擅长把一件小事做到极致。51hlw 官网的每一次改版，都围绕“让创作者的劳动更容易被看见”展开——更清晰的作者档案、更透明的数据榜单、更好用的选题灵感库，都是这个目标的分支。</p>
+        <h3>内容生态如何运转</h3>
+        <p>51hlw 的内容生态由三层构成。第一层是<em>官方发布</em>的品牌企划，由内部制作团队完成，负责建立审美与品质基线；第二层是签约创作者的常态更新，覆盖日更、周更与月更节奏；第三层是社区用户的投稿作品，经审核后进入新人专区。三层之间互相引流，也互相校准，任何一个环节都不允许用低质内容凑数。</p>
+        <p>我们相信内容平台的价值不在“多”，而在“可被信任”。因此 51hlw 建立了编辑复审机制：每一部进入焦点位的短片，至少要经过两位编辑独立观看并给出记录；每一次专题上线，都要同步公开选题说明。这种做法在行业内不算主流，却是 51hlw 口碑的来源。</p>
+        <h3>技术、工具与创作者陪伴</h3>
+        <p>51hlw 为创作者提供了剪辑脚本灵感库、标题建议器与段落节奏检测三个工具模块。它们不替创作者做决定，只负责把模糊的感觉变成可勾选的清单。上线一年来，使用过灵感库的作者平均完片周期缩短了 23%。这是我们理解的“创新”：不是喧哗的概念，而是让具体的人少走一点弯路。</p>
+        <p>作为一个多元、包容的社区，51hlw 同样欢迎非职业创作者。菜谱、养花、修家电、通勤路上的随手拍，只要表达是真诚的，就值得一个体面的展示位。我们做过统计，平台播放完成度最高的一批作品里，有 41% 来自粉丝数不足一万的普通用户。这正是 51hlw 存在的意义：让更多人相信自己的日常值得被记录。</p>
+        <h3>面向未来</h3>
+        <p>未来三年，51hlw 计划把城市影像计划扩展到 30 座城市，与本地创作者共同完成在地文化的影像档案；同时持续投入原创短片扶持基金，每年资助 50 个长片项目。我们希望 51hlw 官网成为一扇窗，窗外不是算法推送的碎片，而是经过时间沉淀的、值得信赖的影像作品。感谢每一位把素材交给我们的作者，也感谢每一位愿意安静看完一部短片的观众。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点影像 -->
+  <section class="hlw-section" id="hlw-focus">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Focus</p>
+          <h2>焦点影像 · 编辑部本周推荐</h2>
+        </div>
+        <p>由 51hlw 编辑团队独立观看并记录，每部作品均附选题说明与制作手记，帮助你看懂镜头背后的取舍。</p>
+      </div>
+      <div class="hlw-focus-grid">
+        <article class="hlw-vcard hlw-vcard-big">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c26a4a'/%3E%3Cstop offset='1' stop-color='%23782f22'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Ccircle cx='640' cy='90' r='120' fill='%23f3ece0' opacity='.16'/%3E%3Crect x='60' y='270' width='300' height='14' rx='7' fill='%23f3ece0' opacity='.7'/%3E%3Crect x='60' y='298' width='210' height='14' rx='7' fill='%23f3ece0' opacity='.45'/%3E%3Cpath d='M0 380 Q200 320 400 370 T800 340 L800 450 L0 450 Z' fill='%23522118' opacity='.8'/%3E%3Cpath d='M420 120 L470 120 L445 78 Z' fill='%23f3ece0' opacity='.8'/%3E%3Crect x='420' y='140' width='180' height='9' rx='4.5' fill='%23f3ece0' opacity='.6'/%3E%3C/svg%3E" alt="焦点短片《深巷早餐图鉴》第12集封面：暖橘色晨光中的街巷" width="800" height="450">
+            <span class="hlw-cover-tag">编辑部首选</span>
+            <span class="hlw-cover-dur">23:14</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">城市探索</span><span class="hlw-tag">日常记录</span><span class="hlw-tag">4K</span></div>
+            <h3>深巷早餐图鉴 · 第 12 集：六点半的豆浆与一条街的醒转</h3>
+            <p>摄制组在城南老街连续跟拍 21 天，用固定机位记录一家豆浆铺从凌晨四点亮灯到午市收摊的完整节奏。全片没有旁白，只有磨豆声、铁勺声和老板与熟客的短句寒暄。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23c26a4a">林</span>林知远 · 51hlw 签约创作者</span>
+              <span>12.6 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>3821</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+              <button class="hlw-op" data-hlw-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+        <div class="hlw-focus-side">
+          <article class="hlw-vcard">
+            <div class="hlw-mini-v">
+              <div class="hlw-vcard-cover">
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%232c5b55'/%3E%3Ccircle cx='250' cy='52' r='44' fill='%23bcd9d1' opacity='.3'/%3E%3Cpath d='M0 150 Q80 110 160 145 T320 130 L320 200 L0 200 Z' fill='%23152e2b' opacity='.8'/%3E%3Crect x='28' y='32' width='120' height='9' rx='4.5' fill='%23f3ece0' opacity='.7'/%3E%3Crect x='28' y='52' width='80' height='9' rx='4.5' fill='%23f3ece0' opacity='.4'/%3E%3C/svg%3E" alt="教程短片《一台手机拍出稳定运镜》封面：深绿色场景与运镜示意" width="320" height="200">
+              </div>
+              <div class="hlw-mini-body">
+                <h4>一台手机拍出稳定运镜：5 个零成本练习</h4>
+                <span>教程干货 · 8.2 万次播放</span>
+              </div>
+            </div>
+          </article>
+          <article class="hlw-vcard">
+            <div class="hlw-mini-v">
+              <div class="hlw-vcard-cover">
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23c9a227'/%3E%3Ccircle cx='80' cy='60' r='52' fill='%23f3ece0' opacity='.32'/%3E%3Cpath d='M0 160 Q90 120 180 155 T320 140 L320 200 L0 200 Z' fill='%238a6d12' opacity='.75'/%3E%3Crect x='170' y='40' width='110' height='9' rx='4.5' fill='%232a2415' opacity='.55'/%3E%3Crect x='170' y='60' width='72' height='9' rx='4.5' fill='%232a2415' opacity='.35'/%3E%3C/svg%3E" alt="人物访谈《修表匠的四十年》封面：金色光线中的工作台" width="320" height="200">
+              </div>
+              <div class="hlw-mini-body">
+                <h4>修表匠的四十年：慢一点，才看得清</h4>
+                <span>人物访谈 · 6.4 万次播放</span>
+              </div>
+            </div>
+          </article>
+          <article class="hlw-vcard">
+            <div class="hlw-mini-v">
+              <div class="hlw-vcard-cover">
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23376b60'/%3E%3Crect x='0' y='0' width='320' height='200' fill='%23f3ece0' opacity='.08'/%3E%3Ccircle cx='62' cy='150' r='40' fill='%23bcd9d1' opacity='.35'/%3E%3Crect x='110' y='46' width='150' height='10' rx='5' fill='%23f3ece0' opacity='.7'/%3E%3Crect x='110' y='68' width='100' height='10' rx='5' fill='%23f3ece0' opacity='.4'/%3E%3Cpath d='M0 176 L320 150' stroke='%23f3ece0' stroke-width='2' opacity='.3'/%3E%3C/svg%3E" alt="深度测评《三支平价麦克风的真实差异》封面：青绿色音波图形" width="320" height="200">
+              </div>
+              <div class="hlw-mini-body">
+                <h4>三支平价麦克风的真实差异：室内实测</h4>
+                <span>深度测评 · 5.1 万次播放</span>
+              </div>
+            </div>
+          </article>
+          <article class="hlw-vcard">
+            <div class="hlw-mini-v">
+              <div class="hlw-vcard-cover">
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23e6dbc8'/%3E%3Ccircle cx='250' cy='140' r='58' fill='%232f6f6a' opacity='.35'/%3E%3Crect x='26' y='36' width='140' height='10' rx='5' fill='%232f6f6a' opacity='.6'/%3E%3Crect x='26' y='60' width='96' height='10' rx='5' fill='%232f6f6a' opacity='.35'/%3E%3Cpath d='M0 170 Q100 140 200 168 T320 160 L320 200 L0 200 Z' fill='%23a89a7e' opacity='.55'/%3E%3C/svg%3E" alt="治愈影像《下雨天的阳台一小时》封面：米色与绿色交织的窗景" width="320" height="200">
+              </div>
+              <div class="hlw-mini-body">
+                <h4>下雨天的阳台一小时：给忙碌一个暂停键</h4>
+                <span>治愈影像 · 4.7 万次播放</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="hlw-stream hlw-section" id="hlw-stream">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Community Stream</p>
+          <h2>社区热播 · 值得信赖的精品内容</h2>
+        </div>
+        <p>按兴趣筛选你关心的方向，所有作品均经过编辑复审与版权核验，可直接收藏进个人片单。</p>
+      </div>
+      <div class="hlw-tabs" id="hlw-tabs" role="tablist" aria-label="内容筛选">
+        <button class="hlw-tab is-active" data-hlw-filter="all">全部</button>
+        <button class="hlw-tab" data-hlw-filter="生活记录">生活记录</button>
+        <button class="hlw-tab" data-hlw-filter="教程干货">教程干货</button>
+        <button class="hlw-tab" data-hlw-filter="人物访谈">人物访谈</button>
+        <button class="hlw-tab" data-hlw-filter="城市探索">城市探索</button>
+        <button class="hlw-tab" data-hlw-filter="科技前沿">科技前沿</button>
+      </div>
+      <div class="hlw-stream-grid" id="hlw-stream-grid">
+
+        <article class="hlw-vcard" data-hlw-cat="生活记录">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%232f6f6a'/%3E%3Ccircle cx='320' cy='50' r='60' fill='%23bcd9d1' opacity='.28'/%3E%3Crect x='30' y='150' width='180' height='11' rx='5.5' fill='%23f3ece0' opacity='.75'/%3E%3Crect x='30' y='172' width='120' height='11' rx='5.5' fill='%23f3ece0' opacity='.45'/%3E%3Cpath d='M240 100 L280 100 L260 62 Z' fill='%23f3ece0' opacity='.75'/%3E%3C/svg%3E" alt="短片《把出租屋改造成工作室的30天》封面：青绿色房间一角" width="400" height="225">
+            <span class="hlw-cover-tag">生活</span>
+            <span class="hlw-cover-dur">18:02</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">生活记录</span><span class="hlw-tag">改造</span></div>
+            <h3>把出租屋改造成工作室的 30 天</h3>
+            <p>预算五千，一间十二平的次卧，从拆旧柜到装好第一盏补光灯，全流程记录每一个后悔和惊喜。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%232f6f6a">周</span>周屿</span>
+              <span>9.8 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>2104</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="hlw-vcard" data-hlw-cat="教程干货">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%231d3b37'/%3E%3Crect x='40' y='40' width='150' height='12' rx='6' fill='%23c9a227'/%3E%3Crect x='40' y='66' width='96' height='12' rx='6' fill='%23f3ece0' opacity='.5'/%3E%3Cpath d='M180 130 L240 160 L180 190 Z' fill='%23c26a4a' opacity='.9'/%3E%3Ccircle cx='320' cy='150' r='42' fill='%232f6f6a' opacity='.55'/%3E%3C/svg%3E" alt="教程《剪辑节奏的三个隐藏开关》封面：深色剪辑界面示意" width="400" height="225">
+            <span class="hlw-cover-tag">干货</span>
+            <span class="hlw-cover-dur">14:37</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">教程干货</span><span class="hlw-tag">剪辑</span></div>
+            <h3>剪辑节奏的三个隐藏开关：让观众不划走</h3>
+            <p>用三个真实片段做对照实验，讲清入点、呼吸感与音乐落点之间的关系，新手也能直接照做。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23c9a227">陈</span>陈默</span>
+              <span>11.2 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>3066</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="hlw-vcard" data-hlw-cat="人物访谈">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e6dbc8'/%3E%3Ccircle cx='110' cy='110' r='54' fill='%23c26a4a' opacity='.7'/%3E%3Cpath d='M110 84 A26 26 0 1 1 109.9 84 Z' fill='%23fdfbf5' opacity='.85'/%3E%3Crect x='210' y='72' width='150' height='11' rx='5.5' fill='%233d4f4d' opacity='.55'/%3E%3Crect x='210' y='96' width='100' height='11' rx='5.5' fill='%233d4f4d' opacity='.32'/%3E%3Crect x='210' y='120' width='124' height='11' rx='5.5' fill='%233d4f4d' opacity='.2'/%3E%3C/svg%3E" alt="访谈《做了十年配乐，我学会听噪音》封面：暖色人物剪影" width="400" height="225">
+            <span class="hlw-cover-tag">访谈</span>
+            <span class="hlw-cover-dur">32:05</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">人物访谈</span><span class="hlw-tag">音乐</span></div>
+            <h3>做了十年配乐，我学会听噪音</h3>
+            <p>一位独立配乐师的十年手记：从给广告写十秒片段，到为纪录片做整轨声音设计，他谈取舍与妥协。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%233d6f63">许</span>许南</span>
+              <span>7.3 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>1789</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="hlw-vcard" data-hlw-cat="城市探索">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%232c5b55'/%3E%3Cpath d='M0 170 L70 120 L130 170 L190 100 L260 170 L320 128 L400 176 L400 225 L0 225 Z' fill='%23152e2b' opacity='.8'/%3E%3Ccircle cx='330' cy='52' r='30' fill='%23f3ece0' opacity='.6'/%3E%3Crect x='28' y='32' width='110' height='10' rx='5' fill='%23bcd9d1' opacity='.75'/%3E%3C/svg%3E" alt="城市探索《夜行巴士的最后一站》封面：夜色城市天际线" width="400" height="225">
+            <span class="hlw-cover-tag">城市</span>
+            <span class="hlw-cover-dur">21:48</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">城市探索</span><span class="hlw-tag">夜行</span></div>
+            <h3>夜行巴士的最后一站</h3>
+            <p>跟着末班车司机跑完一整趟线路，记录凌晨的城市表情，以及那些只在深夜出现的人。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%231d3b37">高</span>高野</span>
+              <span>8.5 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>2412</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="hlw-vcard" data-hlw-cat="科技前沿">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23182e2b'/%3E%3Cg stroke='%233f8f85' stroke-width='2' opacity='.7'%3E%3Cpath d='M40 180 L100 120 L160 150 L230 70 L300 110 L370 50' fill='none'/%3E%3C/g%3E%3Ccircle cx='230' cy='70' r='9' fill='%23c9a227'/%3E%3Ccircle cx='370' cy='50' r='9' fill='%23c26a4a'/%3E%3Crect x='40' y='30' width='120' height='10' rx='5' fill='%23f3ece0' opacity='.55'/%3E%3C/svg%3E" alt="科技观察《AI辅助剪辑到底省了哪些时间》封面：深色折线数据图" width="400" height="225">
+            <span class="hlw-cover-tag">科技</span>
+            <span class="hlw-cover-dur">16:20</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">科技前沿</span><span class="hlw-tag">工具</span></div>
+            <h3>AI 辅助剪辑到底省了哪些时间</h3>
+            <p>不吹不黑，用同一批素材跑三套流程，把省下的时间精确到分钟，并标出仍然不能交给机器判断的环节。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23376b60">沈</span>沈一舟</span>
+              <span>10.4 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>2870</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="hlw-vcard" data-hlw-cat="生活记录">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23c26a4a'/%3E%3Ccircle cx='90' cy='70' r='44' fill='%23f3ece0' opacity='.3'/%3E%3Cpath d='M0 176 Q100 140 200 168 T400 150 L400 225 L0 225 Z' fill='%23782f22' opacity='.72'/%3E%3Crect x='210' y='44' width='140' height='10' rx='5' fill='%23f3ece0' opacity='.8'/%3E%3Crect x='210' y='66' width='92' height='10' rx='5' fill='%23f3ece0' opacity='.5'/%3E%3C/svg%3E" alt="生活记录《一周便当计划：十五分钟晚餐》封面：暖橘色厨房台面" width="400" height="225">
+            <span class="hlw-cover-tag">生活</span>
+            <span class="hlw-cover-dur">12:56</span>
+            <span class="hlw-play" aria-hidden="true"></span>
+          </div>
+          <div class="hlw-vcard-body">
+            <div class="hlw-tagset"><span class="hlw-tag">生活记录</span><span class="hlw-tag">美食</span></div>
+            <h3>一周便当计划：十五分钟晚餐</h3>
+            <p>给加班党的五个方案，从备料到装盒一次讲透，附带一份可打印的采购清单。</p>
+            <div class="hlw-vcard-meta">
+              <span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23c26a4a">苏</span>苏晚</span>
+              <span>13.1 万次播放</span>
+            </div>
+            <div class="hlw-ops">
+              <button class="hlw-op" data-hlw-like>♡ 喜欢 <b>4021</b></button>
+              <button class="hlw-op" data-hlw-fav>☆ 收藏</button>
+              <button class="hlw-op" data-hlw-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p class="hlw-result-tip" id="hlw-filter-tip"></p>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="hlw-section" id="hlw-topics">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Series</p>
+          <h2>专题企划 · 51hlw 官方发布</h2>
+        </div>
+        <p>每个专题都由内部制作团队统筹，公开选题说明与更新节奏。专题不追热点，只做能长期留存的内容。</p>
+      </div>
+      <div class="hlw-topics-grid">
+        <article class="hlw-topic hlw-topic-wide">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 700'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f6f6a'/%3E%3Cstop offset='1' stop-color='%23152e2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='700' fill='url(%23t1)'/%3E%3Ccircle cx='640' cy='140' r='140' fill='%23c9a227' opacity='.22'/%3E%3Cpath d='M0 500 Q200 400 400 480 T800 440 L800 700 L0 700 Z' fill='%230f2421' opacity='.75'/%3E%3Crect x='70' y='120' width='300' height='16' rx='8' fill='%23f3ece0' opacity='.68'/%3E%3Crect x='70' y='154' width='200' height='16' rx='8' fill='%23f3ece0' opacity='.4'/%3E%3Ccircle cx='150' cy='300' r='46' fill='%23bcd9d1' opacity='.45'/%3E%3Ccircle cx='230' cy='300' r='46' fill='%23bcd9d1' opacity='.3'/%3E%3Ccircle cx='310' cy='300' r='46' fill='%23bcd9d1' opacity='.18'/%3E%3C/svg%3E" alt="专题《城市影像档案》封面：青绿色调的城市剪影与三个圆环">
+          <div class="hlw-topic-body">
+            <span>进行中 · 已更新 5 期</span>
+            <h3>城市影像档案：30 座城市的日常切片</h3>
+            <p>51hlw 年度重点企划，与本地创作者共同记录街巷、菜场、通勤与厂房。每期一个城市，每城一位驻场作者，成片与拍摄手记同步发布。</p>
+          </div>
+        </article>
+        <article class="hlw-topic">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23c9a227'/%3E%3Ccircle cx='110' cy='110' r='80' fill='%23f3ece0' opacity='.32'/%3E%3Cpath d='M0 300 Q100 250 200 290 T400 270 L400 400 L0 400 Z' fill='%238a6d12' opacity='.72'/%3E%3Crect x='40' y='40' width='150' height='12' rx='6' fill='%232a2415' opacity='.5'/%3E%3C/svg%3E" alt="专题《手艺人》封面：金色调的手作工序特写">
+          <div class="hlw-topic-body">
+            <span>连载中</span>
+            <h3>手艺人：十二种缓慢的工序</h3>
+            <p>修表、编竹、刻字、糊灯，十二位手艺人，十二段愿意慢下来的时间。</p>
+          </div>
+        </article>
+        <article class="hlw-topic">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23376b60'/%3E%3Cpath d='M0 260 L80 200 L150 250 L220 170 L300 240 L400 190 L400 400 L0 400 Z' fill='%231d3b37' opacity='.8'/%3E%3Ccircle cx='310' cy='90' r='38' fill='%23f3ece0' opacity='.55'/%3E%3C/svg%3E" alt="专题《深夜食单》封面：青绿色夜间街景">
+          <div class="hlw-topic-body">
+            <span>已完结 · 8 期</span>
+            <h3>深夜食单：城市收摊之后</h3>
+            <p>凌晨的炒粉摊、通宵面馆与便利店关东煮，记录夜里仍在营业的温柔。</p>
+          </div>
+        </article>
+        <article class="hlw-topic">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23e6dbc8'/%3E%3Crect x='40' y='60' width='180' height='14' rx='7' fill='%232f6f6a' opacity='.6'/%3E%3Crect x='40' y='90' width='120' height='14' rx='7' fill='%232f6f6a' opacity='.35'/%3E%3Ccircle cx='290' cy='270' r='66' fill='%23c26a4a' opacity='.55'/%3E%3Cpath d='M0 330 Q120 290 240 320 T400 300 L400 400 L0 400 Z' fill='%23a89a7e' opacity='.5'/%3E%3C/svg%3E" alt="专题《第一次做导演》封面：米色底上的红色圆形与文字块">
+          <div class="hlw-topic-body">
+            <span>报名中</span>
+            <h3>第一次做导演：新人短片扶持</h3>
+            <p>面向零经验创作者的公开征集，提供设备、指导与成片发布位，每年资助 50 个项目。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="hlw-creators hlw-section" id="hlw-creators">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Creators</p>
+          <h2>创作者矩阵 · 内容生态的中坚力量</h2>
+        </div>
+        <p>51hlw 的 2380 位签约创作者分布在四条主线上。点击档案可查看他们的作品与创作手记。</p>
+      </div>
+      <div class="hlw-creator-grid">
+        <article class="hlw-creator">
+          <div class="hlw-creator-top">
+            <span class="hlw-avatar" style="background:%23c26a4a">林</span>
+            <div><h3>林知远</h3><span>城市探索 · 生活记录</span></div>
+          </div>
+          <p>前报社摄影记者，习惯用固定机位等一个瞬间。代表作《深巷早餐图鉴》系列，作品以克制的观察和清晰的声音层次见长。</p>
+          <div class="hlw-creator-foot"><span>作品 <b>86</b> 部</span><span>粉丝 <b>24.1</b> 万</span></div>
+          <div class="hlw-ops"><button class="hlw-op" data-hlw-open="author" data-hlw-name="林知远">查看档案</button><button class="hlw-op" data-hlw-copy>分享作者</button></div>
+        </article>
+        <article class="hlw-creator">
+          <div class="hlw-creator-top">
+            <span class="hlw-avatar" style="background:%23c9a227">陈</span>
+            <div><h3>陈默</h3><span>教程干货 · 剪辑</span></div>
+          </div>
+          <p>从业八年的剪辑指导，擅长把复杂流程拆成可执行的小步骤。他的教程从不贩卖焦虑，只讲能立刻用上的方法。</p>
+          <div class="hlw-creator-foot"><span>作品 <b>142</b> 部</span><span>粉丝 <b>31.6</b> 万</span></div>
+          <div class="hlw-ops"><button class="hlw-op" data-hlw-open="author" data-hlw-name="陈默">查看档案</button><button class="hlw-op" data-hlw-copy>分享作者</button></div>
+        </article>
+        <article class="hlw-creator">
+          <div class="hlw-creator-top">
+            <span class="hlw-avatar" style="background:%232f6f6a">苏</span>
+            <div><h3>苏晚</h3><span>生活记录 · 美食烹饪</span></div>
+          </div>
+          <p>在广告公司上班，下班后拍十五分钟晚餐。她相信普通人的厨房也值得被认真记录，作品长期保持在周更节奏。</p>
+          <div class="hlw-creator-foot"><span>作品 <b>98</b> 部</span><span>粉丝 <b>19.7</b> 万</span></div>
+          <div class="hlw-ops"><button class="hlw-op" data-hlw-open="author" data-hlw-name="苏晚">查看档案</button><button class="hlw-op" data-hlw-copy>分享作者</button></div>
+        </article>
+        <article class="hlw-creator">
+          <div class="hlw-creator-top">
+            <span class="hlw-avatar" style="background:%233d6f63">许</span>
+            <div><h3>许南</h3><span>人物访谈 · 音乐现场</span></div>
+          </div>
+          <p>独立配乐师，十年来为纪录片与短剧写声音。他的访谈节目从不设问题清单，更愿意让对方自己找到想说的话。</p>
+          <div class="hlw-creator-foot"><span>作品 <b>54</b> 部</span><span>粉丝 <b>12.9</b> 万</span></div>
+          <div class="hlw-ops"><button class="hlw-op" data-hlw-open="author" data-hlw-name="许南">查看档案</button><button class="hlw-op" data-hlw-copy>分享作者</button></div>
+        </article>
+        <article class="hlw-creator">
+          <div class="hlw-creator-top">
+            <span class="hlw-avatar" style="background:%23376b60">沈</span>
+            <div><h3>沈一舟</h3><span>科技前沿 · 深度测评</span></div>
+          </div>
+          <p>工程师出身的影像测评作者，习惯用数据说话。所有测评素材公开可查，结论部分会标明实验条件与误差范围。</p>
+          <div class="hlw-creator-foot"><span>作品 <b>73</b> 部</span><span>粉丝 <b>16.4</b> 万</span></div>
+          <div class="hlw-ops"><button class="hlw-op" data-hlw-open="author" data-hlw-name="沈一舟">查看档案</button><button class="hlw-op" data-hlw-copy>分享作者</button></div>
+        </article>
+        <article class="hlw-creator">
+          <div class="hlw-creator-top">
+            <span class="hlw-avatar" style="background:%23c26a4a">高</span>
+            <div><h3>高野</h3><span>城市探索 · 深度访谈</span></div>
+          </div>
+          <p>自由摄影师，长期拍摄夜间题材。他偏爱末班车、夜班岗与凌晨的市场，认为城市最真实的时刻都在别人睡着之后。</p>
+          <div class="hlw-creator-foot"><span>作品 <b>61</b> 部</span><span>粉丝 <b>14.8</b> 万</span></div>
+          <div class="hlw-ops"><button class="hlw-op" data-hlw-open="author" data-hlw-name="高野">查看档案</button><button class="hlw-op" data-hlw-copy>分享作者</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品墙 -->
+  <section class="hlw-section" id="hlw-gallery">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Gallery</p>
+          <h2>影像墙 · 用户投稿精选</h2>
+        </div>
+        <p>来自社区的日常片段，每一格都保存了具体的时间、地点与心情。点击任意画面可查看拍摄信息。</p>
+      </div>
+      <div class="hlw-stream-grid is-two">
+        <article class="hlw-vcard">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23bcd9d1'/%3E%3Ccircle cx='620' cy='110' r='96' fill='%232f6f6a' opacity='.28'/%3E%3Cpath d='M0 330 Q200 260 400 320 T800 300 L800 450 L0 450 Z' fill='%23e6dbc8' opacity='.9'/%3E%3Crect x='70' y='70' width='220' height='13' rx='6.5' fill='%232f6f6a' opacity='.55'/%3E%3Crect x='70' y='96' width='150' height='13' rx='6.5' fill='%232f6f6a' opacity='.3'/%3E%3C/svg%3E" alt="作品墙画面：清晨阳台上的绿植与浅绿墙面" width="800" height="450">
+            <span class="hlw-cover-tag">投稿精选</span>
+            <span class="hlw-cover-dur">06:12</span>
+          </div>
+          <div class="hlw-vcard-body">
+            <h3>阳台上的第 100 天</h3>
+            <p>一位用户用手机记录自家阳台四季变化，同一机位，同一种平静。</p>
+            <div class="hlw-vcard-meta"><span class="hlw-author-mini"><span class="hlw-avatar" style="background:%232f6f6a">叶</span>叶青</span><span>3.2 万次播放</span></div>
+            <div class="hlw-ops"><button class="hlw-op" data-hlw-like>♡ 喜欢 <b>965</b></button><button class="hlw-op" data-hlw-copy>复制链接</button></div>
+          </div>
+        </article>
+        <article class="hlw-vcard">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%232c5b55'/%3E%3Cg stroke='%23bcd9d1' stroke-width='3' opacity='.5'%3E%3Cpath d='M0 360 L160 250 L320 330 L520 200 L680 290 L800 240'/%3E%3C/g%3E%3Ccircle cx='520' cy='200' r='12' fill='%23c9a227'/%3E%3Crect x='60' y='60' width='180' height='12' rx='6' fill='%23f3ece0' opacity='.55'/%3E%3C/svg%3E" alt="作品墙画面：青绿色山脊线与金色路标" width="800" height="450">
+            <span class="hlw-cover-tag">户外</span>
+            <span class="hlw-cover-dur">14:29</span>
+          </div>
+          <div class="hlw-vcard-body">
+            <h3>第一次独自徒步：我把路线拍清楚了</h3>
+            <p>完整的行进节奏与补给点标注，适合周末第一次尝试的入门路线。</p>
+            <div class="hlw-vcard-meta"><span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23376b60">罗</span>罗屿</span><span>2.8 万次播放</span></div>
+            <div class="hlw-ops"><button class="hlw-op" data-hlw-like>♡ 喜欢 <b>741</b></button><button class="hlw-op" data-hlw-copy>复制链接</button></div>
+          </div>
+        </article>
+        <article class="hlw-vcard">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e6dbc8'/%3E%3Ccircle cx='110' cy='110' r='50' fill='%23c9a227' opacity='.55'/%3E%3Ccircle cx='110' cy='110' r='28' fill='%23fdfbf5' opacity='.8'/%3E%3Crect x='210' y='76' width='130' height='10' rx='5' fill='%233d4f4d' opacity='.5'/%3E%3Crect x='210' y='98' width='90' height='10' rx='5' fill='%233d4f4d' opacity='.3'/%3E%3C/svg%3E" alt="作品墙画面：手作陶碗与米色桌布" width="400" height="225">
+            <span class="hlw-cover-dur">09:40</span>
+          </div>
+          <div class="hlw-vcard-body">
+            <h3>拉坯第七次，终于不歪了</h3>
+            <p>手作同好的一次失败记录，比成功更值得保存。</p>
+            <div class="hlw-vcard-meta"><span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23c9a227">何</span>何遇</span><span>1.6 万次播放</span></div>
+            <div class="hlw-ops"><button class="hlw-op" data-hlw-like>♡ 喜欢 <b>512</b></button><button class="hlw-op" data-hlw-copy>复制链接</button></div>
+          </div>
+        </article>
+        <article class="hlw-vcard">
+          <div class="hlw-vcard-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23c26a4a'/%3E%3Cpath d='M0 170 Q100 140 200 166 T400 150 L400 225 L0 225 Z' fill='%23782f22' opacity='.7'/%3E%3Ccircle cx='310' cy='62' r='34' fill='%23f3ece0' opacity='.55'/%3E%3Crect x='36' y='44' width='130' height='11' rx='5.5' fill='%23f3ece0' opacity='.75'/%3E%3C/svg%3E" alt="作品墙画面：暖橘色调的厨房与蒸汽" width="400" height="225">
+            <span class="hlw-cover-dur">11:03</span>
+          </div>
+          <div class="hlw-vcard-body">
+            <h3>妈妈的红烧肉，我第一次完整拍下来</h3>
+            <p>一道家常菜的完整流程，也是一次母女之间的对话。</p>
+            <div class="hlw-vcard-meta"><span class="hlw-author-mini"><span class="hlw-avatar" style="background:%23c26a4a">方</span>方糖</span><span>4.3 万次播放</span></div>
+            <div class="hlw-ops"><button class="hlw-op" data-hlw-like>♡ 喜欢 <b>1320</b></button><button class="hlw-op" data-hlw-copy>复制链接</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 & 灵感 -->
+  <section class="hlw-section" id="hlw-rank">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Ranking</p>
+          <h2>数据榜单 · 每周一更新的公开口径</h2>
+        </div>
+        <p>所有榜单数据来自站内播放与互动统计，口径公开、可复核。我们相信透明的数据比夸大的数字更有说服力。</p>
+      </div>
+      <div class="hlw-rank-grid">
+        <div class="hlw-rank">
+          <h3>热度榜</h3>
+          <p>按近 7 天播放与完播加权</p>
+          <ol>
+            <li><i>1</i><span>深巷早餐图鉴 第 12 集</span><em>12.6w</em></li>
+            <li><i>2</i><span>一周便当计划：十五分钟晚餐</span><em>13.1w</em></li>
+            <li><i>3</i><span>剪辑节奏的三个隐藏开关</span><em>11.2w</em></li>
+            <li><i>4</i><span>AI 辅助剪辑到底省了哪些时间</span><em>10.4w</em></li>
+            <li><i>5</i><span>把出租屋改造成工作室的 30 天</span><em>9.8w</em></li>
+          </ol>
+        </div>
+        <div class="hlw-rank">
+          <h3>新人榜</h3>
+          <p>入驻 90 天内创作者</p>
+          <ol>
+            <li><i>1</i><span>叶青 · 阳台上的第 100 天</span><em>+68%</em></li>
+            <li><i>2</i><span>何遇 · 拉坯第七次</span><em>+54%</em></li>
+            <li><i>3</i><span>方糖 · 妈妈的红烧肉</span><em>+47%</em></li>
+            <li><i>4</i><span>罗屿 · 第一次独自徒步</span><em>+39%</em></li>
+            <li><i>5</i><span>闻溪 · 旧书修复三十天</span><em>+31%</em></li>
+          </ol>
+        </div>
+        <div class="hlw-rank">
+          <h3>口碑榜</h3>
+          <p>按收藏率与复看率排序</p>
+          <ol>
+            <li><i>1</i><span>修表匠的四十年</span><em>98.2</em></li>
+            <li><i>2</i><span>做了十年配乐，我学会听噪音</span><em>97.5</em></li>
+            <li><i>3</i><span>夜行巴士的最后一站</span><em>96.8</em></li>
+            <li><i>4</i><span>下雨天的阳台一小时</span><em>95.4</em></li>
+            <li><i>5</i><span>三支平价麦克风的真实差异</span><em>94.1</em></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 灵感工具 -->
+  <section class="hlw-idea hlw-section" id="hlw-idea">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Creator Tools</p>
+          <h2>创作灵感 · 51hlw 工具模块</h2>
+        </div>
+        <p>三个轻量工具，帮把模糊的想法变成可执行的清单。它们不替你做决定，只减少无谓的试错。</p>
+      </div>
+      <div class="hlw-idea-grid">
+        <div class="hlw-idea-card">
+          <span class="hlw-idea-num">TOOL 01</span>
+          <h3>脚本灵感库</h3>
+          <p>输入你的题材与时长，返回三段式结构建议与常见坑点提示，附同类佳作参考，方便对照自己的节奏。</p>
+          <button data-hlw-open="submit">试用并投稿 ›</button>
+        </div>
+        <div class="hlw-idea-card">
+          <span class="hlw-idea-num">TOOL 02</span>
+          <h3>标题建议器</h3>
+          <p>基于站内高完播作品的命名习惯，给出五种不同语气的标题方向，避免夸张表达，保留信息密度。</p>
+          <button data-hlw-open="submit">获取建议 ›</button>
+        </div>
+        <div class="hlw-idea-card">
+          <span class="hlw-idea-num">TOOL 03</span>
+          <h3>段落节奏检测</h3>
+          <p>上传粗剪时间线，识别过长镜头与情绪断层，给出可操作的调整建议，不改变你的表达意图。</p>
+          <button data-hlw-open="submit">提交粗剪 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="hlw-section" id="hlw-reviews">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Voices</p>
+          <h2>用户评价 · 来自社区的真实声音</h2>
+        </div>
+        <p>我们保留不同意见，也保留粗糙但真实的表达。以下评价来自站内用户，未经润色。</p>
+      </div>
+      <div class="hlw-reviews-grid">
+        <div class="hlw-review">
+          <p>在 51hlw 看了三年，最喜欢的是它不催你。片长二十分钟也敢放，评论区也没人喷“太长不看”。这种氛围在现在的视频网站里挺少见的。</p>
+          <div class="hlw-review-foot"><span class="hlw-avatar" style="background:%232f6f6a">阿</span>阿岚 · 观众</div>
+        </div>
+        <div class="hlw-review">
+          <p>作为创作者说一句：审核反馈会写具体原因，不是一句“不符合规范”就完事。第一次投稿被退回，编辑还给了剪辑建议，后来那部片进了新人榜。</p>
+          <div class="hlw-review-foot"><span class="hlw-avatar" style="background:%23c26a4a">叶</span>叶青 · 签约创作者</div>
+        </div>
+        <div class="hlw-review">
+          <p>画质确实稳，4K 素材下载也方便。唯一想吐槽的是专题更新有时候会延后，希望官方能把排期写得更准一点。</p>
+          <div class="hlw-review-foot"><span class="hlw-avatar" style="background:%23c9a227">老</span>老周 · 企业用户</div>
+        </div>
+        <div class="hlw-review">
+          <p>我是跟着教程区入门的。陈默那期讲入点的视频我反复看了四遍，第二天就把自己片子重剪了一版，完播率真的上去了。</p>
+          <div class="hlw-review-foot"><span class="hlw-avatar" style="background:%233d6f63">林</span>林小满 · 观众</div>
+        </div>
+        <div class="hlw-review">
+          <p>51hlw 的榜单口径写得清楚，这点很加分。做投放的时候能直接拿去和客户解释数据来源，不用再自己编一套话术。</p>
+          <div class="hlw-review-foot"><span class="hlw-avatar" style="background:%23376b60">M</span>Momo · 品牌合作方</div>
+        </div>
+        <div class="hlw-review">
+          <p>希望移动端能加个片单导出功能，现在收藏多了有点翻不过来。其他都挺好，客服回复也快，晚上十点提的问题第二天早上就有答复。</p>
+          <div class="hlw-review-foot"><span class="hlw-avatar" style="background:%23c26a4a">沈</span>沈言 · 观众</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 动态 & FAQ -->
+  <section class="hlw-section" id="hlw-news" style="background:#fff;border-top:1px solid var(--hlw-line);border-bottom:1px solid var(--hlw-line)">
+    <div class="hlw-wrap">
+      <div class="hlw-section-head">
+        <div>
+          <p class="hlw-eyebrow">Updates & FAQ</p>
+          <h2>企业动态与常见问题</h2>
+        </div>
+        <p>51hlw 的每一次更新都会在这里公示，包括新功能、内容排期与活动规则。</p>
+      </div>
+      <div class="hlw-news-grid">
+        <div class="hlw-news-list">
+          <article class="hlw-news-item">
+            <time>2026.11.18</time>
+            <div><h3>冬季影像征集正式开放报名</h3><p>主题为“我的一平米”，面向所有用户征集 3 至 10 分钟的原创短片，入围作品将在官网焦点位展映并获得创作基金。</p></div>
+          </article>
+          <article class="hlw-news-item">
+            <time>2026.11.14</time>
+            <div><h3>创作者后台新增剪辑脚本灵感库</h3><p>工具模块正式对签约创作者开放，支持按题材与时长生成结构建议，同时提供同类佳作参考链接。</p></div>
+          </article>
+          <article class="hlw-news-item">
+            <time>2026.11.09</time>
+            <div><h3>城市影像档案更新至第 5 期</h3><p>本期驻场作者高野带来夜行巴士专题，配套发布完整拍摄手记与器材清单，可在专题页查看。</p></div>
+          </article>
+          <article class="hlw-news-item">
+            <time>2026.11.03</time>
+            <div><h3>关于内容审核反馈机制的说明</h3><p>自本月起，所有未通过的投稿均会收到具体原因与修改建议，创作者可在七日内提交调整版本。</p></div>
+          </article>
+        </div>
+        <div class="hlw-faq">
+          <details open>
+            <summary>如何成为 51hlw 的签约创作者？</summary>
+            <div class="hlw-faq-body">在官网提交三部分材料：个人简介、两部代表作、一份未来三个月的选题计划。编辑团队会在十个工作日内回复，通过后进入三个月的试运营期。</div>
+          </details>
+          <details>
+            <summary>投稿作品的版权归谁？</summary>
+            <div class="hlw-faq-body">版权始终归创作者所有。51hlw 仅获得在站内及官方账号展示的授权，期限与范围会在投稿协议中逐条写明，不包含转授权第三方。</div>
+          </details>
+          <details>
+            <summary>平台对画质有什么要求？</summary>
+            <div class="hlw-faq-body">常规投稿建议 1080P、码率不低于 8Mbps；进入焦点位与专题的作品需提供原始素材或 4K 版本，以便统一调色与封装。</div>
+          </details>
+          <details>
+            <summary>可以上传非原创素材吗？</summary>
+            <div class="hlw-faq-body">不可以。51hlw 坚持正版与原创，二创作品需提供原素材授权说明。使用他人音乐请附授权凭证，未授权的素材会被退回。</div>
+          </details>
+          <details>
+            <summary>榜单数据多久更新一次？</summary>
+            <div class="hlw-faq-body">热度榜、新人榜与口碑榜均为每周一上午更新，统计周期为前一周的自然周。数据口径说明可在榜单页底部展开查看。</div>
+          </details>
+          <details>
+            <summary>企业合作有哪些形式？</summary>
+            <div class="hlw-faq-body">包括品牌专题定制、创作者联合企划与影像素材授权三类。我们更倾向长期合作，不接受影响内容判断的硬性植入要求。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="hlw-section" id="hlw-contact">
+    <div class="hlw-wrap">
+      <div class="hlw-contact">
+        <div>
+          <p class="hlw-eyebrow" style="color:#c9a227">Contact</p>
+          <h2>让下一部作品，<br>从 51hlw 官网开始</h2>
+          <p>无论你是想投稿、想合作，还是只想聊聊一个还没成形的想法，都欢迎联系我们。51hlw 始终相信，好的影像来自具体的对话，而不是抽象的数据。</p>
+          <div class="hlw-modal-actions" style="margin-top:22px">
+            <button class="hlw-btn hlw-btn-clay" data-hlw-open="submit">创作者投稿</button>
+            <button class="hlw-btn hlw-btn-ghost" style="border-color:#8fb8a8;color:#d8e8de" data-hlw-open="report">问题反馈</button>
+          </div>
+        </div>
+        <div class="hlw-contact-list">
+          <div class="hlw-contact-row"><i>合</i><div><span>品牌合作</span><b>brand@51hlw.example</b></div></div>
+          <div class="hlw-contact-row"><i>投</i><div><span>投稿通道</span><b>creator@51hlw.example</b></div></div>
+          <div class="hlw-contact-row"><i>媒</i><div><span>媒体联络</span><b>press@51hlw.example</b></div></div>
+          <div class="hlw-contact-row"><i>址</i><div><span>办公地址</span><b>城市影像中心 · 三层创作区</b></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="hlw-footer">
+  <div class="hlw-wrap">
+    <div class="hlw-footer-grid">
+      <div>
+        <div class="hlw-footer-brand"><span class="hlw-logo-mark">51</span><b>51hlw</b></div>
+        <p>51hlw 官方网站 · 持续运营中。以原创短片、生活记录与实用教程为核心，为创作者与企业搭建高品质内容生态，坚持正版、高清与真实的表达。</p>
+        <p style="margin-top:10px">© 2026 51hlw 影像内容社区 版权所有</p>
+        <p>备案信息：内容服务备案·持续运营主体公示</p>
+      </div>
+      <div>
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="#hlw-focus">焦点影像</a></li>
+          <li><a href="#hlw-stream">社区热播</a></li>
+          <li><a href="#hlw-topics">专题企划</a></li>
+          <li><a href="#hlw-gallery">影像墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#hlw-creators">创作者矩阵</a></li>
+          <li><a href="#hlw-idea">创作工具</a></li>
+          <li><a href="#hlw-rank">数据榜单</a></li>
+          <li><a href="#hlw-news">更新日志</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#hlw-about">品牌故事</a></li>
+          <li><a href="#hlw-reviews">用户评价</a></li>
+          <li><a href="#hlw-news">常见问题</a></li>
+          <li><a href="#hlw-contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hlw-footer-bottom">
+      <span>51hlw 官方网站 | 用户至上 · 匠心内容 · 值得信赖</span>
+      <span>内容经编辑复审 · 素材均为正版授权</span>
+    </div>
+  </div>
+</footer>
+
+<button class="hlw-top-btn" id="hlw-top-btn" aria-label="回到顶部">↑</button>
+<div class="hlw-toast" id="hlw-toast" role="status" aria-live="polite"></div>
+
+<div class="hlw-modal-mask" id="hlw-modal-mask">
+  <div class="hlw-modal" role="dialog" aria-modal="true" aria-labelledby="hlw-modal-title">
+    <button class="hlw-modal-close" id="hlw-modal-close" aria-label="关闭">×</button>
+    <div id="hlw-modal-content"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var toast = document.getElementById('hlw-toast');
+  var toastTimer = null;
+  window.hlwToast = function(msg){
+    toast.textContent = msg;
+    toast.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('is-show'); }, 2200);
+  };
+
+  /* 移动端导航 */
+  var burger = document.getElementById('hlw-burger');
+  var panel = document.getElementById('hlw-mobile-panel');
+  burger.addEventListener('click', function(){
+    var open = panel.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  panel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      panel.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('hlw-search-input');
+  var searchBtn = document.getElementById('hlw-search-btn');
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){ hlwToast('请输入短片、作者或话题关键词'); searchInput.focus(); return; }
+    hlwToast('已按「' + kw + '」为你匹配到相关内容');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-hlw-like]');
+    if(like){
+      var b = like.querySelector('b');
+      var n = parseInt(b.textContent, 10) || 0;
+      var on = like.classList.toggle('is-on');
+      b.textContent = on ? (n + 1) : Math.max(0, n - 1);
+      if(on){ hlwToast('已加入你的喜欢列表'); }
+      return;
+    }
+    var fav = e.target.closest('[data-hlw-fav]');
+    if(fav){
+      var f = fav.classList.toggle('is-fav');
+      fav.textContent = f ? '★ 已收藏' : '☆ 收藏';
+      hlwToast(f ? '已收藏至个人片单' : '已移出收藏');
+      return;
+    }
+    var copy = e.target.closest('[data-hlw-copy]');
+    if(copy){
+      var link = '51hlw 内容分享链接已复制到剪贴板';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText('51hlw 官方网站内容页').then(function(){ hlwToast(link); }, function(){ hlwToast('复制失败，请手动选择链接'); });
+      }else{
+        hlwToast(link);
+      }
+      return;
+    }
+  });
+
+  /* 标签筛选 */
+  var tabs = document.getElementById('hlw-tabs');
+  var cards = document.querySelectorAll('#hlw-stream-grid [data-hlw-cat]');
+  var tip = document.getElementById('hlw-filter-tip');
+  tabs.addEventListener('click', function(e){
+    var tab = e.target.closest('[data-hlw-filter]');
+    if(!tab) return;
+    tabs.querySelectorAll('.hlw-tab').forEach(function(t){ t.classList.remove('is-active'); });
+    tab.classList.add('is-active');
+    var f = tab.getAttribute('data-hlw-filter');
+    var count = 0;
+    cards.forEach(function(c){
+      var show = (f === 'all') || (c.getAttribute('data-hlw-cat') === f);
+      c.classList.toggle('hlw-hidden', !show);
+      if(show) count++;
+    });
+    tip.style.display = 'block';
+    tip.textContent = f === 'all' ? '正在展示全部 ' + count + ' 部作品' : '「' + f + '」方向共 ' + count + ' 部作品，均为编辑复审内容';
+  });
+
+  /* 弹窗 */
+  var mask = document.getElementById('hlw-modal-mask');
+  var content = document.getElementById('hlw-modal-content');
+  var modalTitleId = 'hlw-modal-title';
+  var modalData = {
+    comment: {
+      title: '参与讨论',
+      body: '<p>51hlw 的评论区不追求热闹，只希望每一条都言之有物。写下你看到的具体细节，比一句“好看”更有价值。</p><textarea rows="4" placeholder="说说你注意到的一个镜头、一段声音或一种情绪…"></textarea>',
+      action: '发布评论'
+    },
+    share: {
+      title: '分享 51hlw 官网',
+      body: '<p>把这份影像档案分享给同样喜欢记录的人：</p><div class="hlw-modal-list"><button data-hlw-copy>复制页面链接</button><button data-hlw-channel="微信">分享到微信</button><button data-hlw-channel="微博">分享到微博</button><button data-hlw-channel="QQ">分享到 QQ</button></div>',
+      action: null
+    },
+    author: {
+      title: '创作者档案',
+      body: '',
+      action: null
+    },
+    submit: {
+      title: '创作者投稿通道',
+      body: '<p>填写基本信息，编辑团队将在十个工作日内回复。请确保作品为原创且素材已获授权。</p><input type="text" placeholder="你的昵称或团队名称"><input type="text" placeholder="作品标题"><textarea rows="3" placeholder="一句话介绍这部作品的创作动机…"></textarea>',
+      action: '提交投稿'
+    },
+    report: {
+      title: '问题反馈',
+      body: '<p>发现问题、内容错误或体验建议，都可以在这里告诉我们。反馈会由人工逐条查看。</p><textarea rows="4" placeholder="请描述你遇到的问题或建议…"></textarea>',
+      action: '提交反馈'
+    },
+    about: {
+      title: '51hlw 品牌理念',
+      body: '<p>我们相信记录本身就是一种力量。51hlw 不制造焦虑，也不鼓吹速成，只愿意为认真做内容的人提供一个稳定、可被信任的展示位。</p><p>原创、正版、高清是底线；真实、温暖、陪伴是方向。九年时间，我们始终在做的，是把镜头对准具体的人与具体的日常。</p>',
+      action: null
+    }
+  };
+
+  function openModal(key, extra){
+    var d = modalData[key];
+    if(!d) return;
+    var html = '<h3 id="' + modalTitleId + '">' + d.title + '</h3>';
+    if(key === 'author' && extra){
+      html += '<p>你正在查看创作者「' + extra + '」的公开档案。其作品均已通过 51hlw 版权核验，可在焦点影像与社区热播区查看。</p><div class="hlw-modal-list"><button data-hlw-copy>复制作者主页链接</button><button data-hlw-open="comment">给作者留言</button></div>';
+    }else{
+      html += d.body;
+      if(d.action){
+        html += '<div class="hlw-modal-actions"><button class="hlw-btn hlw-btn-primary" data-hlw-modal-action>' + d.action + '</button></div>';
+      }
+    }
+    content.innerHTML = html;
+    mask.classList.add('is-open');
+  }
+  function closeModal(){ mask.classList.remove('is-open'); content.innerHTML = ''; }
+
+  document.addEventListener('click', function(e){
+    var open = e.target.closest('[data-hlw-open]');
+    if(open){
+      var key = open.getAttribute('data-hlw-open');
+      openModal(key, open.getAttribute('data-hlw-name'));
+      return;
+    }
+    if(e.target.closest('[data-hlw-channel]')){
+      var ch = e.target.closest('[data-hlw-channel]').getAttribute('data-hlw-channel');
+      hlwToast('已生成' + ch + '分享卡片');
+      closeModal();
+      return;
+    }
+    if(e.target.closest('[data-hlw-modal-action]')){
+      hlwToast('已收到，感谢你的参与');
+      closeModal();
+    }
+  });
+  document.getElementById('hlw-modal-close').addEventListener('click', closeModal);
+  mask.addEventListener('click', function(e){ if(e.target === mask) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* 回顶 */
+  var topBtn = document.getElementById('hlw-top-btn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 420){ topBtn.classList.add('is-show'); }
+    else{ topBtn.classList.remove('is-show'); }
+  });
+  topBtn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-hlw-count]');
+  var done = false;
+  function runCount(){
+    if(done) return;
+    var trigger = document.getElementById('hlw-hero');
+    if(!trigger) return;
+    done = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-hlw-count'), 10) || 0;
+      var start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / 1200, 1);
+        el.textContent = Math.floor(target * (1 - Math.pow(1 - p, 3))).toLocaleString('zh-CN');
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCount(); });
+    }, { threshold: .3 });
+    io.observe(document.getElementById('hlw-hero'));
+  }else{
+    runCount();
+  }
+})();
+</script>
+</body>
+                                 </html>
